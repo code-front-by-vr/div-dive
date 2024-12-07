@@ -1,0 +1,59 @@
+@mixin header1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 75px;
+}
+
+@mixin header2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+} 
+
+@mixin header3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+} 
+
+@mixin header4 {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+}
+
+@mixin header5 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+@mixin header6 {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+}
+
+
+@mixin button_normal {
+    padding: 0 91px;
+    background-color: $main_color;
+    text-align: center;
+    a {
+        text-align: center;
+        color: #fff; 
+        text-transform: uppercase;
+        @include header4;
+        line-height: 80px;
+    }
+}
+
+@mixin button_hover {
+    @include button_normal;
+    background-color: $hover-color;
+}
+
+@mixin button_active {
+    @include button_normal;
+    box-shadow: 4px 4px 30px 0 #FF4343;
+}
