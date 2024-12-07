@@ -1,0 +1,21 @@
+{
+  "name": "div-dive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "http-server": "^14.1.1",
+    "parcel": "^2.13.2",
+    "sass": "^1.82.0"
+  }
+}
