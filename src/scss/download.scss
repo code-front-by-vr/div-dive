@@ -1,6 +1,9 @@
 .download {
     padding: 114px 0;
     text-align: center;
+    @media (max-width: 768px) {
+        padding: 78px 0;
+    }
     @media (max-width: 320px) {
         padding: 34px 0 45px;
     }
@@ -32,6 +35,9 @@
             font-size: 14px;
             line-height: 16px;
         }
+        @media (max-width: 425px) {
+            margin-bottom: 40px;
+        }
         @media (max-width: 320px) {
             font-size: 13px;
             line-height: 15px;
@@ -41,12 +47,45 @@
     }
     &__btn {
         @include button_normal;
+        padding: 24px 79px;
         transition: all 0.3s;
+        @media (max-width: 1024px) {
+            padding: 28px 77px;
+        }
+        @media (max-width: 425px) {
+            padding: 28px 57px;
+        }
+        @media (max-width: 320px) {
+            width: 100%;
+            padding: 28px 0;
+        }
+
+        a {
+            @media (max-width: 1024px) {
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
+
         &:hover {
-            @include button_hover
+            @include button_hover;
+            a {
+                @media (max-width: 1024px) {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+            }
         }
         &:active {
             @include button_active;
+            a {
+                @media (max-width: 1024px) {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+            }
         }
+
+        
     }
 }
