@@ -36,24 +36,55 @@
 
 
 @mixin button_normal {
-    padding: 0 91px;
+    display: inline-flex;
+    padding: 30px 80px;
     background-color: $main_color;
     text-align: center;
     a {
-        text-align: center;
         color: #fff; 
         text-transform: uppercase;
         @include header4;
-        line-height: 80px;
+        line-height: 21px;
+    }
+
+
+    @media (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    @media (max-width: 320px) {
+        width: 100%;
+        padding:  15px;
     }
 }
 
 @mixin button_hover {
     @include button_normal;
     background-color: $hover-color;
+
+    @media (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    @media (max-width: 320px) {
+        width: 100%;
+        padding:  15px;
+    }
 }
 
 @mixin button_active {
     @include button_normal;
     box-shadow: 4px 4px 30px 0 #FF4343;
+
+    @media (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    @media (max-width: 320px) {
+        width: 100%;
+        padding:  15px;
+    }
 }
