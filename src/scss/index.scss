@@ -1,8 +1,9 @@
 @import './variables';
 @import './mixins';
 @import './fonts';
-@import "./header.scss";
-@import "./team.scss";
+@import "./header";
+@import "./team";
+@import "./download";
 
 * {
     margin: 0;
