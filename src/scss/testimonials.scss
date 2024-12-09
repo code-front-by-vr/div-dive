@@ -1,0 +1,87 @@
+.swiper-container {
+    width: 100%;
+    background-color: $slider-bg;
+}
+.swiper-slide {
+    &-content {
+        display: flex;
+        justify-content: center;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+    }
+
+    &-img {
+        width: 50%;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &-descr {
+        width: 50%;
+        background-color: $slider-bg;
+        padding: 96px 130px 136px 169px;
+        text-align: left;
+        @media (max-width: 1024px) {
+            padding: 81px 82px 90px 110px;
+        }
+        @media (max-width: 768px) {
+            width: 100%;
+            padding: 81px 82px 90px;
+            text-align: center;
+        }
+        @media (max-width: 575px) {
+            padding: 20px 50px 70px;
+        }
+        @media (max-width: 320px) {   
+            padding: 23px 15px 95px;
+        }
+        &-quote {
+            margin-bottom: 17px;
+            @media (max-width: 1024px) {
+                margin-bottom: 14px;
+            }
+            @media (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+            
+            @media (max-width: 320px) {
+                margin-bottom: 23px;
+            }
+            p {
+                font-family: "Cardo";
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 49px;
+                font-style: italic;
+                color: #fff;
+                text-transform: capitalize;
+                @media (max-width: 1024px) {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+            }
+        }
+        &-author {
+            font-family: "Raleway";
+            @include header6;
+            color: #fff;
+            text-transform: uppercase;
+            @media (max-width: 1024px) {
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 14px;
+            }
+
+        }
+    }
+}
