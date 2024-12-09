@@ -1,11 +1,12 @@
 @import "./variables";
 @import "./mixins";
-@import "./fonts";
+@import "./cdn";
 @import "./header";
 @import "./team";
 @import "./download";
 @import "./footer.scss";
 @import "./works.scss";
+@import "./testimonials.scss";
 
 * {
     margin: 0;
@@ -26,4 +27,5 @@
 
 html {
     font-family: "Raleway", "sans-serif";
+    scroll-behavior: smooth;
 }
