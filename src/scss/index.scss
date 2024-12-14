@@ -2,10 +2,11 @@
 @import "./mixins";
 @import "./cdn";
 @import "./header";
+@import "./features.scss";
+@import "./works.scss";
 @import "./team";
 @import "./download";
 @import "./footer.scss";
-@import "./works.scss";
 @import "./testimonials.scss";
 
 * {
@@ -20,9 +21,24 @@
     max-width: 1170px;
     margin: auto;
     padding: 0 15px;
-    text-align: center;
     position: relative;
     z-index: 3;
+    text-align: center;
+    @media (max-width: 1200px) { 
+        .container {
+            max-width: 970px;
+        }
+    }
+    @media (max-width: 992px) {
+        .container {
+            max-width: 750px;
+        }
+    }
+    @media (max-width: 767px) {
+        .container {
+            max-width: none;
+        }
+    }
 }
 
 html {
