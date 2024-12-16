@@ -1,6 +1,8 @@
 .download {
     padding: 114px 0;
     text-align: center;
+    position: relative;
+    z-index: 0;
     @media (max-width: 768px) {
         padding: 78px 0;
     }
@@ -20,10 +22,9 @@
 
         @media (max-width: 320px) {
             max-width: 280px;
-            margin: 0 auto;
+            margin: 0 auto 20px;
             font-size: 18px;
             line-height: 21px;
-            margin-bottom: 20px;
         }
     }
     &__subtitle {

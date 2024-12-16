@@ -1,10 +1,15 @@
 .features {
     padding: 116px 0;
+    position: relative;
+    z-index: 0;
     @media (max-width: 1024px) {
         padding: 78px 80px;
     }
-    @media (max-width: 320px) {
-        padding: 40px 50px;
+    @media (max-width: 575px) {
+        padding: 68px 60px;
+    }
+    @media (max-width: 375px) {
+        padding: 40px 0px;
     }
     &__wrapper {
         display: grid;
@@ -18,7 +23,7 @@
             gap: 50px 20px;
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 991px) {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, auto);
             gap: 88.5px 15px;
@@ -26,6 +31,7 @@
 
         @media (max-width: 575px) {
             grid-template-columns: 1fr;
+            row-gap: 50px;
         }
         @media (max-width: 320px) {
             row-gap: 41.5px;
@@ -46,6 +52,12 @@
                 width: 75px;
                 height: 75px;
                 margin-bottom: 21px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
             }
         }
         &-title {

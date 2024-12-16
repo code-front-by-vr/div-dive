@@ -71,6 +71,11 @@
         @include button_normal;
         padding: 24px 90px;
         transition: all 0.3s;
+        animation-name: heartbeat;
+        animation-duration: 1.3s;
+        animation-timing-function: ease;
+        animation-iteration-count: 3;
+
         @media (max-width: 1024px) {
             padding: 20px 63px;
         }
@@ -83,6 +88,7 @@
         }
         &:hover {
             @include button_hover;
+            animation-play-state: paused;
         }
         &:active {
             @include button_active;
@@ -96,14 +102,63 @@
     align-items: center;
     border-bottom: 1px solid #BABBC5;
     margin-bottom: 129px;
+    position: relative;
+    &__burger {
+        display: none;
+        position: relative;
+        z-index: 50;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 18px;
+        & span {
+            width: 100%;
+            height: 3px;
+            transform: scale(1);
+            background-color: #fff;
+        }
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: #fff;
+            transition: all 0.3s ease 0s;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        &.active {
+            background-color: transparent;
+            border: none;
+        }
+        &.active span {
+            transform: scale(0);
+        }
+        &.active::before {
+            top: 50%;
+            transform: rotate(-45deg) translate((0, -50%));
+        }
+        &.active::after {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0, 50%);
+        }
+        
+    }
     &__logo {
+        padding: 22px 0;
         img {
             width: 184px;
             height: 26px;
         }
     }
+
+        
     &__list {
-        width: 670px;
+        max-width: 670px;
         display: flex;
         justify-content: space-between;
 
@@ -129,5 +184,67 @@
                 transition: all 0.3s;
             }
         }
+    }
+}
+
+@media (max-width: 900px) {
+    .navigation__burger {
+        display: flex;
+        position: fixed;
+        top: 19px;
+        right: 35px;
+        border: 1px solid rgba(37, 43, 73, 0.5);
+        background-color: rgba(37, 43, 73, 1);
+        z-index: 50;
+    }
+    
+    .navigation__list {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        height: 100%;
+        max-width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        // background-color: darkviolet;
+        background-image: url("../img/background/header-bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(37, 43, 73, 0.5);
+        }
+        // opacity: 1;
+        animation: burgerAnimation 0.4s;
+        & li  {
+            text-align: left;
+            padding: 24px 0;
+            z-index: 1;
+        }
+    }
+}
+
+.open {
+    display: flex !important;
+}
+
+@keyframes burgerAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

@@ -1,6 +1,8 @@
 .footer {
     background: linear-gradient(#353C65 75%, #2C3154 75%);
     color: #fff;
+    position: relative;
+    z-index: 0;
     @media (max-width: 767px) {
         background: linear-gradient(#353C65 85%, #2C3154 85%);
     }
