@@ -73,8 +73,9 @@
         transition: all 0.3s;
         animation-name: heartbeat;
         animation-duration: 1.3s;
-        animation-timing-function: ease;
-        animation-iteration-count: 3;
+        animation-direction: alternate-reverse;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 5;
 
         @media (max-width: 1024px) {
             padding: 20px 63px;
@@ -193,11 +194,9 @@
         position: fixed;
         top: 19px;
         right: 35px;
-        border: 1px solid rgba(37, 43, 73, 0.5);
-        background-color: rgba(37, 43, 73, 1);
         z-index: 50;
     }
-    
+
     .navigation__list {
         display: none;
         flex-direction: column;
@@ -212,7 +211,6 @@
         z-index: 50;
         overflow-y: auto;
         padding: 50px 40px;
-        // background-color: darkviolet;
         background-image: url("../img/background/header-bg.png");
         background-repeat: no-repeat;
         background-position: center;
@@ -226,7 +224,6 @@
             height: 100%;
             background-color: rgba(37, 43, 73, 0.5);
         }
-        // opacity: 1;
         animation: burgerAnimation 0.4s;
         & li  {
             text-align: left;
